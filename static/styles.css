@@ -13,12 +13,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background-image: 
-        linear-gradient(
-            rgba(143, 81, 31, 0.9) 0%,
-            rgba(10, 62, 131, 0.97) 70%
-        ),
-        url('/static/format/cardback.jpg');
+    background-color:rgb(31, 83, 161);
 }
 
 .navbar .nav-link {
