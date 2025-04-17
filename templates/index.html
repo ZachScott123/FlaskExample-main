@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+        <div class = "container">
+            <div class = "row">
+        {% for car in garage %}
+            <div class="col-md-4 col-sm-6 col-12 mb-3">
+                <div class="card p-3">
+                    <h5>{{ car.make  }}</h5>
+                    <p>{{ car.model  }}</p>
+                    <p>{{ car.car_year  }}</p>
+                    <p>{{ car.series  }}</p>
+                    <image height = fill src="{{ file_location }}/{{ car.image }}" class="card_img-top"/>
+                </div>
+            </div>
+        {% endfor %}
+            </div>
+        </div>
+{% endblock %}

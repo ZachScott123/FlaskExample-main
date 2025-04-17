@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+        <form action="/add" method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="make" class="form-label">Car Make</label>
+            <input type="text" class="form-control" name="make" id="make" aria-describedby="car_make">
+          </div>
+          <div class="mb-3">
+            <label for="model" class="form-label">Car Model</label>
+            <input type="text" class="form-control" name="model" id="model" aria-describedby="car_model">
+          </div>
+          <div class="mb-3">
+            <label for="car_year" class="form-label">Car Year</label>
+            <input type="text" class="form-control" name="car_year" id="car_year" aria-describedby="car_year">
+          </div>
+          <div class="mb-3">
+            <label for="series" class="form-label">Series</label>
+            <input type="text" class="form-control" name="series" id="series">
+          </div>
+          <div class="mb-3">
+            <label for="file" class="form-label">Car Image</label>
+            <input type="file" class="form-control" name="file" id="file">
+          </div>
+          <button type="submit" class="btn btn-primary">Add Hot Wheel</button>
+        </form>
+        <script src="/static/verify.js"></script>
+{% endblock %}
