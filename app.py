@@ -52,6 +52,23 @@ def add():
         session.modified = True
         flash("Good job! You have added a new car to your collection", "message")
         return redirect("/")
+    
+@app.route("/remove", methods=["GET", "POST"])
+def remove():
+    if request.method == "GET":
+        return render_template("remove.html", games=session.get("videoGames"), file_location=file_save_location)
+
+    elif request.method == "POST":
+        if "videoGames" not in session:
+            session["videoGames"] = []
+
+        remove_image = request.form.get("remove", None)
+        if remove_image:
+            session["videoGames"] = [game for game in session["videoGames"] if game["image"] != remove_image]
+            session.modified = True
+            flash("Hot Wheel removed successfully.", "message")
+
+        return redirect("/")
 
 if __name__ == "__main__":
    app.run(debug=True, host="0.0.0.0")

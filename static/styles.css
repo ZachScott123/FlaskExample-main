@@ -89,15 +89,6 @@ body {
 }
 
 /* Card Content */
-.card h5 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    font-size: 1.25rem;
-    color: #e6f4ff;
-    text-transform: uppercase;
-    letter-spacing: 0.7px;
-    margin-top: 2rem;
-}
 
 .card span {
     margin: 0.5rem 0;
@@ -109,7 +100,7 @@ body {
 }
 
 .hotwheels {
-    margin-top: 2rem;
+    margin-top: 3rem;
     width: 500px;
     align-self: flex-end;
 }
@@ -124,7 +115,7 @@ body {
     max-height: 200px;
     width: 100%;
     object-fit: contain;
-    margin-top: 1rem;
+    margin-top: 2rem;
     border-radius: 10px;
 }
 
@@ -178,4 +169,33 @@ button.btn-primary {
 
 button.btn-primary:hover {
     background-color: #ff9900;
+}
+
+.removetext {
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.remove {
+    background-image: 
+        linear-gradient(
+            rgba(0, 136, 255, 0.9) 0%,
+            rgba(0, 136, 255, 0.97) 27%,
+            rgb(221, 240, 255) 54%,
+            rgb(211, 246, 255) 100%
+        ),
+        url('/static/format/cardback.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 50%;
+}
+
+.remove h1 {
+    color: rgb(255, 255, 255)
+}
+
+.removeform {
+    margin-left: auto;
 }

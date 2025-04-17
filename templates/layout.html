@@ -21,6 +21,10 @@
                     <a class="nav-link nav-btn {% if request.path == url_for('add') %} active {% endif %}" href="/add"
                        {% if request.path == url_for('add') %} aria-current="page"{% endif %}>Add Car</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-btn {% if request.path == url_for('remove') %} active {% endif %}" href="/remove"
+                       {% if request.path == url_for('remove') %} aria-current="page"{% endif %}>Remove Car</a>
+                </li>
               </ul>
             </div>
         </div>

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="remove">
+        <h1>REMOVE A CAR</h1>
+        <ul class="list-group mb-4">
+        {% for game in games %}
+            <li class="list-group-item d-inline-flex align-items-center justify-content-between">
+                <div class="removetext">
+                    <strong>{{ game.make }} {{ game.model }}</strong> - {{ game.series }} ({{ game.car_year }})<br>
+                    <img src="{{ file_location }}/{{ game.image }}" alt="game image" width="100" class="mt-2">
+                </div>
+                <form action="/remove" method="post" class="removeform">
+                    <input type="hidden" name="remove" value="{{ game.image }}">
+                    <button type="submit" class="btn btn-danger">Remove</button>
+                </form>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <p></p>
+    <a href="/" class="btn btn-secondary">Go Back</a>
+{% endblock %}
