@@ -4,9 +4,44 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.hotwheelsmattel {
+    width: 200px;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    margin-right: 1rem;
+}
+
 /* Navbar */
 .navbar {
-    margin-bottom: 2rem;
+    background-image: 
+        linear-gradient(
+            rgba(143, 81, 31, 0.9) 0%,
+            rgba(10, 62, 131, 0.97) 70%
+        ),
+        url('/static/format/cardback.jpg');
+}
+
+.navbar .nav-link {
+    color: #ffffff !important; /* White text */
+}
+
+.navbar .nav-link:hover {
+    color: #ffcc00 !important; /* Yellowish hover color */
+}
+
+.nav-buttons .nav-btn {
+    background-color: #000000;
+    border: 3px solid rgb(255, 255, 255);
+    font-weight: bold;
+    color: rgb(255, 255, 255) !important;
+    border-radius: 25px;
+    padding: 0.7rem 1rem;
+    margin-left: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-buttons .nav-btn:hover {
+    background-color: #ff6a36;
 }
 
 /* Flash messages */
@@ -27,10 +62,21 @@ body {
 
 /* Card Styling */
 .card {
+    background-image: 
+        linear-gradient(
+            rgba(0, 136, 255, 0.9) 0%,
+            rgba(0, 136, 255, 0.97) 27%,
+            rgba(233, 245, 255, 1) 54%,
+            rgba(255, 255, 255, 1) 100%
+        ),
+        url('/static/format/cardback.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     position: relative;
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
-    background: linear-gradient(#0088ff 0%, #0088ff 27%, #e9f5ff 54%, #ffffff 100%);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
@@ -44,27 +90,33 @@ body {
 
 /* Card Content */
 .card h5 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
     font-size: 1.25rem;
-    color: #1d3557;
+    color: #e6f4ff;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
     margin-top: 2rem;
 }
 
 .card span {
     margin: 0.5rem 0;
+    font-weight: bold;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #333;
     text-transform: uppercase;
-    text-decoration: wavy;
     letter-spacing: 0.7px;
 }
 
 .hotwheels {
+    margin-top: 2rem;
     width: 500px;
     align-self: flex-end;
 }
 
 .mattel {
-    width: 60px;
+    align-self: flex-end;
+    width: 45px;
   }  
 
 /* Card Image */
@@ -89,17 +141,31 @@ body {
 
 /* Form Styling */
 form {
+    background-image: 
+        linear-gradient(
+            rgba(0, 136, 255, 0.9) 0%,
+            rgba(0, 136, 255, 0.97) 27%,
+            rgb(221, 240, 255) 54%,
+            rgb(211, 246, 255) 100%
+        ),
+        url('/static/format/cardback.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
     max-width: 600px;
     margin: auto;
-    background: #ffffff;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Input Fields */
 input[type="text"],
 input[type="file"] {
+    color: #ff4500;
     border-radius: 6px;
 }
 
@@ -111,5 +177,5 @@ button.btn-primary {
 }
 
 button.btn-primary:hover {
-    background-color: #ff6a36;
+    background-color: #ff9900;
 }
